@@ -1,0 +1,31 @@
+<mat-toolbar style="background-color: white;" class="mat-elevation-z0 justify-content-between">
+    <div mat-button disableRipple routerLink="/" class="d-flex justify-content-center" style="outline: none; cursor:pointer;">
+        <img [src]="wave_long_logo_url" width="80px">
+    </div>
+    <div class="d-flex align-items-center justify-content-end">
+        <ng-container *ngIf="screenWidth > 600">
+            <p style="font-size: 1rem;" class="mb-0 mr-4 pointer">Login</p>
+            <button mat-raised-button disableRipple class="login-button-mini" style="margin-left: 24px;">Create Account</button>
+        </ng-container>
+
+        <button *ngIf="screenWidth <= 600" class="menu-button" mat-icon-button disableRipple (click)="extenedOptionPanOpened=!extenedOptionPanOpened">
+            <mat-icon>{{extenedOptionPanOpened ? 'close' : 'menu'}}</mat-icon>
+        </button>
+    </div>
+</mat-toolbar>
+
+<mat-divider *ngIf="screenWidth <= 600"></mat-divider>
+
+<ng-container *ngIf="screenWidth <= 600 && extenedOptionPanOpened">
+    <div class="d-flex flex-column" style="margin: 24px 0px;">
+        <button mat-raised-button disableRipple class="login-button">
+            Create Account
+        </button>
+    
+        <p style="margin-top: 24px;" class="mat-body mb-0 text-center gray-color-text">
+            Already have an account? <span class="mat-subheading-1 mb-0 pointer" style="color: black; font-weight: 800;">Login</span>
+        </p>
+    </div>
+
+    <mat-divider></mat-divider>
+</ng-container>

@@ -1,0 +1,140 @@
+<div class="main-content-container" [style.min-height]="'calc(100% - '+footerHeight+')'">
+    <app-header style="padding-top: 24px;"></app-header>
+    <section class="hero-section mt-5">
+        <div class="hero-text-continer">
+            <p class="hero-text poppins-font">
+                A humble effort to help you explore your
+
+                <span class="swip-text-container poppins-font">
+                    <div class="swip-text">
+                        <ul class="flip4">
+                            <li><span class="gradient">Self</span></li>
+                            <li><span class="gradient">Curiosity</span></li>
+                            <li><span class="gradient">Imagination</span></li>
+                            <li><span class="gradient">Dreams</span></li>
+                        </ul>
+                    </div>
+                </span>
+            </p>
+
+            <p class="sub-hero-text">Connect with students & Create your circle of explorers</p>
+
+            <p class="sub-text poppins-font">A platform where students team up and explore their curiosity, Together.</p>
+
+            <button mat-raised-button disableRipple class="hero-button gradient">
+                Let's Explore Together
+            </button>
+        </div>
+
+        <div class="video-container">
+            <video #video muted="true" preload="none" autoplay loop [poster]="hero_art_url">
+                <source [src]="hero_video_url" type="video/mp4"/>
+            </video>
+        </div>
+    </section>
+
+    <mat-tab-group [@.disabled]="true" disableRipple mat-align-tabs="center" class="nav-header-tab mt-5 mb-5">
+        <mat-tab label="How It Works">
+            <ng-template matTabContent>
+                <section class="content-section-wrap">
+                    <div class="image-container">
+                        <img [src]="girl_on_computer_url" height="200px">
+
+                        <div id="swip-img">
+                            <ul class="img-flip">
+                                <li><img [src]="girl_diving_url" height="150px"></li>
+                                <li><img [src]="girl_machine_url" height="150px" style="margin-left: 14px;"></li>
+                                <li><img [src]="girl_painter_url" height="150px" style="margin-left: 7px;"></li>
+                                <li><img [src]="girl_scientist_url" height="150px"></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="text-content">
+                        <p class="mat-headline mb-0 poppins-font">
+                            Share what <span class="highlighted-text gradient">Captivates You</span> and explore what captivates others
+                        </p>
+
+                        <p class="mat-subheading-2 mb-0 mt-2">
+                            Your expression helps someone from the other side feel relatable and less isolated.
+                            And it helps you to connect with students you can relate to.
+                        </p>
+                    </div>
+                </section>
+
+                <section class="content-section-wrap-reverse" style="margin-top: 6rem;">
+                    <div class="text-content">
+                        <p class="mat-headline mb-0 poppins-font">
+                            Have out of the blue conversations like, 
+                            <span *ngIf="this.screenWidth <= 1000" class="mat-headline mb-0 poppins-font highlighted-text gradient">
+                                Are we all stardust?
+                            </span>
+                        </p>
+
+                        <span *ngIf="this.screenWidth > 1000" id="swip-conversation-container">
+                            <div id="swip-conversation-text">
+                                <ul class="flip4">
+                                    <li class="mat-subheading-2">
+                                        <span class="mat-headline mb-0 poppins-font gradient">Where are the dragons?</span>
+                                    </li>
+                                    <li class="mat-subheading-2">
+                                        <span class="mat-headline mb-0 poppins-font gradient">Can zombies think?</span>
+                                    </li>
+                                    <li class="mat-subheading-2">
+                                        <span class="mat-headline mb-0 poppins-font gradient">How does the time machine work?</span>
+                                    </li>
+                                    <li class="mat-subheading-2">
+                                        <span class="mat-headline mb-0 poppins-font gradient">Are we all stardust?</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </span>
+
+                        <p class="mat-subheading-2 mb-0" [ngClass]="this.screenWidth <= 1000 ? 'mt-2' : null">
+                            As goofy as it may sound, but that might be the most relatable conversation you ever had with someone other than yourself.
+                        </p>
+                    </div>
+
+                    <div class="image-container">
+                        <img [src]="girl_on_call_url" height="250px">
+                    </div>
+                </section>
+
+                <section class="content-section-wrap" style="margin-top: 6rem;">
+                    <div class="image-container">
+                        <img [src]="girl_painting_together_url" height="200px">
+                    </div>
+
+                    <div class="text-content">
+                        <p class="mat-headline mb-0 poppins-font">
+                            <span class="highlighted-text gradient">Create</span> something exciting, Together.
+                        </p>
+
+                        <p class="mat-subheading-2 mb-0 mt-2">
+                            Don’t just talk!&nbsp;&nbsp;<strong>create, </strong>&nbsp;<strong>learn, </strong>&nbsp;<strong>solve, </strong>  and <strong>explore</strong> Together.
+                        </p>
+
+                        <p class="mat-subheading-2 mb-0 mt-2">
+                            Every interaction comes with endless possibilities, and exploring them is what this platform is all about.
+                        </p>
+                    </div>
+                </section>
+            </ng-template>
+        </mat-tab>
+
+        <mat-tab label="What's Wave">
+            <ng-template matTabContent>
+                <section class="whats-wave-section">
+                    <p class="mat-subheading-2 poppins-font">We have a humble dream of creating opportunities for students that never existed before.</p>
+                    <p class="mat-subheading-2 poppins-font">What might happen if we take a group of students who are interested in something, curious about it, want to explore it, or want to do something in it. And we let these students interact with one another.</p>
+                    <p class="mat-subheading-2 poppins-font">What would they do together? What would they create? What impact will they have on each other? What opportunities do such interactions bring?</p>
+                    <p class="mat-subheading-2 poppins-font">These are the questions we are seeking answers to. But regardless of the answers, one thing is certain that magic is bound to happen.</p>
+                    <p class="mat-subheading-2 poppins-font">To promote and facilitate such engagement among students, we have created Wave and we need your support to enable students create magic at scale.</p>
+                    <p class="mat-subheading-2"><strong>Wave Team.</strong></p>
+                </section>
+                </ng-template>
+        </mat-tab>
+    </mat-tab-group>
+</div>
+
+<app-footer #footer></app-footer>

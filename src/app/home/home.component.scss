@@ -1,0 +1,349 @@
+:host{
+    display: block;
+    width: inherit;
+    height: inherit;
+    overflow-y: auto;
+}
+
+.main-content-container{
+    padding: 0 15px;
+    width: 1020px;
+    max-height: max-content;
+    margin: 0 auto;
+}
+
+.hero-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.hero-text-continer{
+    padding-right: 15px;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-text{
+    line-height: 1.2;
+    font-weight: 500;
+    font-size: 45px;
+    margin-bottom: 0px;
+}
+
+.sub-hero-text{
+    line-height: 1.2;
+    margin-top: 1.2rem;
+    margin-bottom: 0px;
+    font-weight: 800;
+    font-size: 20px;
+    color: var(--pacific-blue);
+}
+
+.sub-text{
+    line-height: 1.2;
+    margin-top: 1.2rem;
+    margin-bottom: 0px;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.swip-text-container{
+    top: 15px;
+    left: -5px;
+    position: relative;
+    display: inline-block;
+}
+
+.swip-text {
+    overflow: hidden;
+    position: relative;
+    float: inherit;
+    height: 55px;
+    margin-top: -10px;
+    li {
+        font-weight: 800;
+        padding-left: 10px;
+        height: 45px;
+        margin-bottom: 45px;
+        display: block;
+
+        span {
+            color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+        }
+    }
+}
+
+.flip4 {
+    padding: 0px;
+    animation: flip4 10s cubic-bezier(0.23, 1, 0.32, 1.2) infinite;
+}
+
+.hero-button{
+    margin-top: 1.2rem;
+    height: 48px;
+    font-size: 16px;
+    color: white;
+    font-weight: 800;
+}
+  
+  
+  @keyframes flip4 {
+    0% {
+        margin-top: -360px;
+    }
+    5% {
+        margin-top: -270px;
+    }
+    25% {
+        margin-top: -270px;
+    }
+    30% {
+        margin-top: -180px;
+    }
+    50% {
+        margin-top: -180px;
+    }
+    55% {
+        margin-top: -90px;
+    }
+    75% {
+        margin-top: -90px;
+    }
+    80% {
+        margin-top: 0px;
+    }
+    99.99% {
+        margin-top: 0px;
+    }
+    100% {
+        margin-top: -270px;
+    }
+}
+
+.video-container{
+    overflow: hidden;
+    padding-left: 15px;
+    width: 40%;
+
+    > video {
+        display: block;
+        width: 100%;
+        height: auto;
+        top: 0;
+    }
+}
+
+
+
+
+
+.content-section-wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+
+    > .image-container{
+        display: flex;
+        align-items: center;
+        width: 40%;
+    }
+    
+    > .text-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 70%;
+    }
+}
+
+.content-section-wrap-reverse{
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+
+    > .image-container{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: 40%;
+    }
+    
+    > .text-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 70%;
+    }
+}
+
+#swip-conversation-container{
+    position: relative;
+    display: inline-block;
+}
+  
+#swip-conversation-text {
+    overflow: hidden;
+    position: relative;
+    float: inherit;
+    height: 52px;
+    li {
+        height: 45px;
+        margin-bottom: 45px;
+        display: block;
+
+        > span{
+            font-weight: 800;
+            color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+        }
+    }
+}
+
+.highlighted-text{
+    font-weight: 800;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+#swip-img {
+    overflow: hidden;
+    position: relative;
+    float: right;
+    width: 164.1px;
+    li {
+        display: block;
+    }
+}
+  
+  .img-flip {
+    display: flex;
+    padding: 0px;
+    animation: img-flip 10s cubic-bezier(0.23, 1, 0.32, 1.2) infinite;
+}
+  
+  @keyframes img-flip {
+    0% {
+      transform: translateX(-724px);
+    }
+    5% {
+        transform: translateX(-541px);
+    }
+    25% {
+        transform: translateX(-541px);
+    }
+    30% {
+        transform: translateX(-357px);
+    }
+    50% {
+        transform: translateX(-357px);
+    }
+    55% {
+        transform: translateX(-179px);
+    }
+    75% {
+        transform: translateX(-179px);
+    }
+    80% {
+        transform: translateX(0px);
+    }
+    99.99% {
+        transform: translateX(0px);
+    }
+    100% {
+        transform: translateX(-724px);
+    }
+}
+
+
+
+.whats-wave-section{
+    margin: 0 auto;
+    text-align: justify;
+    width: 50%;
+}
+
+
+
+
+
+@media (max-width: 1040px){
+    .main-content-container{
+        width: 100%;
+    }
+
+    .hero-section{
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+    }
+
+    .hero-text-continer{
+        width: 100%;
+        padding-right: 0px;
+        margin-top: 2rem;
+    }
+
+    .hero-text{
+        font-size: 36px;
+    }
+
+    .sub-hero-text{
+        font-size: 16px;
+    }
+
+    .swip-text-container{
+        top: 25px;
+    }
+
+    .video-container{
+        padding-left: 0px;
+        width: unset;
+        height: 40vw;
+    }
+
+    .content-section-wrap{
+        justify-content: center;
+        flex-wrap: wrap;
+
+        > .image-container{
+            justify-content: center;
+            width: 100%;
+        }
+        
+        > .text-content{
+            margin-top: 2rem;
+            justify-content: start;
+            width: 100%;
+        }
+    }
+
+    .content-section-wrap-reverse{
+        justify-content: center;
+        flex-wrap: wrap-reverse;
+    
+        > .image-container{
+            justify-content: center;
+            width: 100%;
+        }
+        
+        > .text-content{
+            margin-top: 2rem;
+            justify-content: start;
+            width: 100%;
+        }
+    }
+
+    .whats-wave-section{
+        width: 100%;
+    }
+}
+
+@media (max-width: 620px){
+
+}

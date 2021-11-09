@@ -1,1 +1,121 @@
 /* You can add global styles to this file, and also import other style files */
+
+// Override the typography in the core CSS.
+@import '~@angular/material/theming';
+
+$custom-typography: mat-typography-config(
+  $font-family: 'Inter, sans-serif'
+);
+
+@include mat-core($custom-typography);
+
+html, body { 
+  height: 100%;
+}
+
+
+body { 
+  margin: 0; 
+  font-family: "Inter", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -moz-osx-font-smoothing: antialiased;
+}
+
+:root{
+    --pacific-blue: #233E49;
+    --medium-blue: #259bcd;
+    --light-medium-blue: #c1e4f3;
+    --light-blue:#97cddc;
+    --gray-text: #767681;
+    --rich-yellow: #F3D060;
+    --rich-red: #BA0C2E;
+    --rich-black: #25282A;
+    --rich-gray: #dddbd1;
+    --primiam-gray: #f2f2f2;
+    --primiam-gray-text: #70757a;
+    --white: #F9F6EF;
+    --white-smokes: #f5f5f5;
+    --creme-white: #efeee9;
+    --gray-background: #f1f3f4;
+    --space-gray: #535150;
+    --silver: #E4E4E2;
+    --sucess: #009688;
+    --link-text-size: 12px;
+    --logo-text-size: 25px;
+
+    --shadow-dense: 0px 3px 3px -2px rgba(0, 0, 0, 0.2), 0px 3px 4px 0px rgba(0, 0, 0, 0.14), 0px 1px 8px 0px rgba(0, 0, 0, 0.12);
+    --shadow-medium-spread: 1px 1px 8px 1px #dcdcdc;
+    --shadow-3d: 0 40px 85px rgb(0 0 0 / 30%);
+    --shadow-whatsapp: 0 17px 50px 0 rgb(0 0 0 / 19%), 0 12px 15px 0 rgb(0 0 0 / 24%);
+    --shadow-cool: 0 5px 5px 0 rgb(154 160 185 / 5%), 0 5px 30px 0 rgb(166 173 201 / 22%);
+}
+
+.poppins-font{
+  font-family: Poppins !important;
+}
+
+.highlight {
+  background: linear-gradient(180deg,rgba(255,255,255,0.2) 90%, #BA0C2E 0%);
+}
+
+.gradient{
+  background-image: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,212,255,1) 100%);
+}
+
+.pointer{
+  cursor: pointer;
+}
+
+
+
+.gray-color-text{
+  color: var(--gray-text);
+}
+
+
+
+
+/* OVERWRITING MATERIAL STYLES */
+
+.mat-tab-label-active{
+  color: var(--rich-black) !important;
+  opacity: 1 !important;
+  }
+
+.mat-tab-group.mat-primary .mat-ink-bar{
+    background-color: var(--pacific-blue);
+}
+
+.mat-tab-label, .mat-tab-link{
+    color: var(--rich-black);
+}
+
+.nav-header-tab{
+  > mat-tab-header{
+    border-bottom: none !important;
+    //background-color: var(--gray-background);
+  }
+
+  > .mat-tab-body-wrapper{
+    margin-top: 3rem;
+    height: 100%;
+
+    > mat-tab-body{
+      > .mat-tab-body-content{
+        scrollbar-color: rgba(0,0,0,.2) hsla(0,0%,100%,.1);
+        scrollbar-width: thin;
+        overflow-y: auto;
+      }
+      .mat-tab-body-content::-webkit-scrollbar{
+        width: 8px!important;
+        height: 8px!important;
+      }
+      .mat-tab-body-content::-webkit-scrollbar-thumb{
+        background-color: rgba(0,0,0,.2);
+      }
+    }
+  }
+}
+
+/* OVERWRITING MATERIAL STYLES */

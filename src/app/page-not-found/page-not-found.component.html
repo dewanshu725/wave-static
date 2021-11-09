@@ -1,0 +1,19 @@
+<div class="main-content-container" [style.min-height]="'calc(100% - '+footerHeight+')'">
+    <img style="padding-top: 24px; margin: 0 auto; display: block;" routerLink="/" class="pointer"  width="80px" [src]="wave_long_logo_url">
+
+    <section class="activation-content-section mt-5">
+        <img class="hero-image" [src]="email_404_url">
+
+        <p class="mat-display-2 mb-0 mt-2 text-center poppins-font">
+            <strong>OOPS!</strong>
+        </p>
+
+        <p class="mat-title mb-0 mt-2 text-center hero-content poppins-font">
+            You lost your way out here, Don't worry :)
+        </p>
+
+        <button mat-raised-button disableRipple class="hero-button">Go Home</button>
+    </section>
+</div>
+
+<app-footer #footer></app-footer>

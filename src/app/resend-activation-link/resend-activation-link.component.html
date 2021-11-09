@@ -1,0 +1,13 @@
+<div class="main-content-container" [style.min-height]="'calc(100% - '+footerHeight+')'">
+    <img style="padding-top: 24px; margin: 0 auto; display: block;" routerLink="/" class="pointer"  width="80px" [src]="wave_long_logo_url">
+
+    <section class="activation-content-section mt-5">
+        <img class="hero-image" [src]="email_send_url">
+
+        <p class="mat-title mb-0 mt-5 text-center hero-content poppins-font">
+            A new activation link has been send to your email. Open the link to activate your account.
+        </p>
+    </section>
+</div>
+
+<app-footer #footer></app-footer>

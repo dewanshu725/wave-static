@@ -1,0 +1,15 @@
+<div class="main-content-container" [style.min-height]="'calc(100% - '+footerHeight+')'">
+    <img style="padding-top: 24px; margin: 0 auto; display: block;" routerLink="/" class="pointer"  width="80px" [src]="wave_long_logo_url">
+
+    <section class="activation-content-section mt-5">
+        <img class="hero-image" [src]="account_activated_url">
+
+        <p class="mat-title mb-0 mt-5 text-center hero-content poppins-font">
+            Congratulations, Your account has been activated. You can now start using the app.
+        </p>
+
+        <button mat-raised-button disableRipple class="hero-button">Go To App</button>
+    </section>
+</div>
+
+<app-footer #footer></app-footer>

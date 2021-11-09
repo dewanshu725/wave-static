@@ -1,0 +1,31 @@
+:host{
+    display: block;
+}
+
+.login-button-mini{
+    font-size: 1rem;
+    line-height: 1.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    color: white;
+    background-color: var(--pacific-blue);
+}
+
+.login-button{
+    margin-top: 1.2rem;
+    height: 48px;
+    font-size: 16px;
+    color: white;
+    background-color: var(--pacific-blue);
+}
+
+.menu-button{
+    border-radius: 0.375rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-button:focus{
+    border: 2px solid;
+}

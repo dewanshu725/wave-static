@@ -1,0 +1,29 @@
+:host{
+    display: block;
+    width: inherit;
+    height: inherit;
+    overflow-y: auto;
+}
+
+.main-content-container{
+    padding: 0 15px;
+    width: 1020px;
+    max-height: max-content;
+    margin: 0 auto;
+}
+
+@media (max-width: 1040px){
+    .main-content-container{
+        width: 100%;
+    }
+}
+
+@media (max-width: 620px){
+    .hero-image{
+        height: 25vh;
+    }
+
+    .hero-content{
+        width: 100%;
+    }
+}
